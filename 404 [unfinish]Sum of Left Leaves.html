@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	/**
+	 * 找到给定二叉树中所有左叶的总和。
+	 * Definition for a binary tree node.
+	 * function TreeNode(val) {
+	 *     this.val = val;
+	 *     this.left = this.right = null;
+	 * }
+	 */
+	/**
+	 * @param {TreeNode} root
+	 * @return {number}
+	 */
+	var sumOfLeftLeaves = function(root) {
+		if(!root){
+			return 0
+		}else{
+			return theSum(root)
+		}
+		function theSum(r, s){
+			if(r.left == null && r.right == null){
+				return s
+			}
+			if(r.left != null){
+				s += r.left.val
+				theSum(r.left, s)
+			}
+			if(r.right != null){
+				theSum(r.right, s)
+			}
+		}
+		return s
+	};
+</script>
