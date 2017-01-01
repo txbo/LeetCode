@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val) {
+   *     this.val = val;
+   *     this.next = null;
+   * }
+   */
+  /**
+   * @param {ListNode} l1
+   * @param {ListNode} l2
+   * @return {ListNode}
+   */
+  var addTwoNumbers = function(l1, l2) {
+    //debugger
+    var ahead = 0
+    var digit = 0
+    var result = []
+    for (var i = l1.length - 1, j = l2.length - 1; l1[i] !== undefined || l2[j] !== undefined; i--, j--) {
+      if (l1[i] === undefined) {
+        l1[i] = 0
+      }
+      if (l2[j] === undefined) {
+        l2[j] = 0
+      }
+      digit = l1[i] + l2[j] + ahead
+      ahead = 0
+      if (digit >= 10) {
+        ahead = 1
+      }
+      result.unshift(digit % 10)
+    }
+    return result
+  };
+
+</script>
