@@ -12,23 +12,21 @@
 	 * @return {number}
 	 */
 	var sumOfLeftLeaves = function(root) {
-		if(!root){
-			return 0
-		}else{
-			return theSum(root)
-		}
-		function theSum(r, s){
-			if(r.left == null && r.right == null){
-				return s
-			}
-			if(r.left != null){
-				s += r.left.val
-				theSum(r.left, s)
-			}
-			if(r.right != null){
-				theSum(r.right, s)
+		debugger
+		var result = 0
+		add(root, result)
+
+		function add(root, result) {
+			if (root) {
+				if (root.left !== null && root.left.left === null && root.left.right === null) {
+					result += root.left
+				}
+				add(root.left, result)
+				add(root.right, result)
 			}
 		}
-		return s
+		return result
 	};
+
 </script>
+ript>
