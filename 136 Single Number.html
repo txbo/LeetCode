@@ -34,19 +34,8 @@
 // };
 // ***********************************************8
 
-// 内置方法排序，每次只和加一位比较，相同跳二，一旦不同返回该数
+// 异或叠加
 var singleNumber = function(nums) {
-	if(nums.length == 1){
-		return nums[0]
-	}else{
-		nums.sort()
-		for(var i=0; i<nums.length-1; i+=2){
-			if(nums[i] !== nums[i+1]){
-				return nums[i]
-			}
-		}
-		return nums[nums.length-1]
-	}
+    return nums.reduce((a, b) => a ^ b)
 };
-debugger
 </script>
