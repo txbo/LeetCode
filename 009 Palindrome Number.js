@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 判断一个数是不是回文数字
  * 首先负数不是回文数字，如果传入数字小于0，返回false
@@ -9,23 +8,22 @@
  *
  * 由于 leetCode 给的复杂度合适，可以接收
  * 如果 复杂度比较紧张，可以优化倒转的 reX ，只倒转一半，再与传入的X的前一半比较，奇数情况下可以不用考虑中间数字。
-**/
-var isPalindrome = function(x) {
+ **/
+var isPalindrome = function (x) {
 	var sum = 0
-	if(x<0){
+	if (x < 0) {
 		return false
-	}else if(x==0){
+	} else if (x == 0) {
 		return true
-	}else{
+	} else {
 		var reX = x
-		for(; reX>0; reX = parseInt(reX/10)){
-			sum = sum*10 + reX%10
+		for (; reX > 0; reX = parseInt(reX / 10)) {
+			sum = sum * 10 + reX % 10
 		}
-		if(x == sum){
+		if (x == sum) {
 			return true
-		}else{
+		} else {
 			return false
 		}
 	}
 };
-</script>

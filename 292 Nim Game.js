@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 题意：一堆石子，我和对手都能一次性抓1~3个，谁能最后抓完，谁赢。
  * 输入石子数，返回我是否能赢（boolean）
@@ -7,7 +6,6 @@
  * 所以，一旦到8的倍数，先手者输
  * @return {boolean}
  */
-var canWinNim = function(n) {
-    return n%4 !== 0
+var canWinNim = function (n) {
+    return n % 4 !== 0
 };
-</script>

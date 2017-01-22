@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 前序遍历二叉树
  * Definition for a binary tree node.
@@ -11,25 +10,25 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var preorderTraversal = function(root) {
+var preorderTraversal = function (root) {
 	var result = []
-	if(root == null){
+	if (root == null) {
 		return result
-	}else{
+	} else {
 		traversal(root, result)
 		return result
 	}
-	function traversal(r, t){
-		if( r == null){
+
+	function traversal(r, t) {
+		if (r == null) {
 			return t
 		}
 		t.push(r.val)
-		if(r.left !== null){
+		if (r.left !== null) {
 			traversal(r.left, t)
 		}
-		if(r.right !==null){
+		if (r.right !== null) {
 			traversal(r.right, t)
 		}
 	}
 };
-</script>

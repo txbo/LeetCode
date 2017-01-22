@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.
  * 翻转二叉树（左右翻转）
@@ -14,7 +13,7 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
+var invertTree = function (root) {
     if (root == null) {
         return null
     }
@@ -25,4 +24,3 @@ var invertTree = function(root) {
     invertTree(root.right)
     return root
 };
-</script>

@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 传入一个奇数长度的数组，元素是整数，其中有且只有一个数字为重复
  */
@@ -35,7 +34,6 @@
 // ***********************************************8
 
 // 异或叠加
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
     return nums.reduce((a, b) => a ^ b)
 };
-</script>
