@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 给定两个数组，写一个函数来计算它们的交集。结果无重复
  * @param {number[]} nums1
@@ -44,19 +43,18 @@ var intersection = function(nums1, nums2) {
     }
 };
 */
-var intersection = function(nums1, nums2) {
-    debugger
-    var theHash = {}
-    var result = []
-    for (var i = 0; i < nums1.length; i++) {
-        theHash[nums1[i]] = true
+var intersection = function (nums1, nums2) {
+  debugger
+  var theHash = {}
+  var result = []
+  for (var i = 0; i < nums1.length; i++) {
+    theHash[nums1[i]] = true
+  }
+  for (var i = 0; i < nums2.length; i++) {
+    if (theHash[nums2[i]]) {
+      result.push(nums2[i])
+      delete theHash[nums2[i]]
     }
-    for (var i = 0; i < nums2.length; i++) {
-        if (theHash[nums2[i]]) {
-            result.push(nums2[i])
-            delete theHash[nums2[i]]
-        }
-    }
-    return result
+  }
+  return result
 };
-</script>

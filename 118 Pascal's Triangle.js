@@ -28,6 +28,5 @@ var generate = function (numRows) {
 			}
 			return row
 		}
-
 	}
 };

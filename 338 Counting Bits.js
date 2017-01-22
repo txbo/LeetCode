@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * 给定一个非负整数num。 对于范围0≤i≤num中的每个数字i，计算它们的二进制表示中的1的数目，并将它们作为数组返回。
  * @param {number} num
@@ -32,17 +31,16 @@
 /**
  * 2^n ~ 2^n+1 中 1 的个数是 0 ~ 2^n-1 的个数 + 1
  */
-var countBits = function(num) {
-    var result = [0]
-    var flagStart = 1,
-        flagEnd = 2
-    for (var i = 1; i <= num; i++) {
-        if (i == flagEnd) {
-            flagStart *= 2
-            flagEnd *= 2
-        }
-        result[i] = result[i - flagStart] + 1
-    }
-    return result
+var countBits = function (num) {
+	var result = [0]
+	var flagStart = 1,
+		flagEnd = 2
+	for (var i = 1; i <= num; i++) {
+		if (i == flagEnd) {
+			flagStart *= 2
+			flagEnd *= 2
+		}
+		result[i] = result[i - flagStart] + 1
+	}
+	return result
 };
-</script>
