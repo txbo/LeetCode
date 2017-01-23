@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * @param {number[][]} points
  * @return {number}
@@ -37,7 +36,7 @@ var numberOfBoomerangs = function(points) {
  * @param {number[][]} points
  * @return {number}
  */
-var numberOfBoomerangs = function(points) {
+var numberOfBoomerangs = function (points) {
     var hash = {},
         len = points.length
     for (var i = 0; i < len; i++) {
@@ -555,4 +554,3 @@ var numberOfBoomerangs = function(points) {
     [7849, -572],
     [215, -7525]
 ]
-</script>

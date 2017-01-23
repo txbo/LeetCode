@@ -1,6 +1,4 @@
 /**
- * 记录深度，进行比较
- * 不知道那里出问题
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
@@ -14,7 +12,7 @@
 var isBalanced = function (root) {
 	var rightLen = 0,
 		leftLen = 0
-	if (root === null || (root.left !== null && root.right !== null)) {
+	if (root === null || (root.left === null && root.right === null)) {
 		return true
 	} else {
 		if (root.left !== null) {
@@ -23,11 +21,11 @@ var isBalanced = function (root) {
 		if (root.right !== null) {
 			rightLen = depth(root.right) + 1
 		}
-	}
-	if (!isBalanced(root.left) || !isBalanced(root.right) || Math.abs(rightLen - leftLen) > 1) {
-		return false
-	} else {
-		return true
+		if (Math.abs(rightLen - leftLen) > 1 || !isBalanced(root.left) || !isBalanced(root.right)) {
+			return false
+		} else {
+			return true
+		}
 	}
 };
 
