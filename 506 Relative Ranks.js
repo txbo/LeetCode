@@ -1,5 +1,5 @@
 /**
- * 性能不佳
+ * AC 但性能不佳
  * 运动员排名颁奖
  * @param {number[]} nums
  * @return {string[]}
