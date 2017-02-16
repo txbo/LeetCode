@@ -10,6 +10,21 @@
  * @param {number} sum
  * @return {number}
  */
+app.use(function(req, res, next) {
+  var cookie = req.headers.cookie
+  var cookie = cookie.split('; ')
+  var cookieObject = {}
+  cookie.map(it => {
+    var cookieParts = it.split('=')
+    var cookieName = cookieParts[0]
+    var cookie
+  })
+})
+
+app.use(function(req, res, next) {
+  var body = req.body
+})
+
 var pathSum = function(root, sum) {
   if (!root) {
     return 0
